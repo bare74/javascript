@@ -6,6 +6,9 @@ class Animal {
     this.color = color;
     this.imgurl = imgurl;
   }
+  feedAnimal() {
+    console.log(this.name, "trenger mere mat");
+  }
 }
 
 const AnimalOne = new Animal(
@@ -22,9 +25,24 @@ const AnimalTwo = new Animal(
   "grå",
   "https://media.snl.no/media/44525/standard_compressed_lerke_sanglerke.jpg"
 );
-console.log(AnimalOne.name);
-console.log(AnimalTwo.color);
 console.log(AnimalOne.spicies);
-console.log(AnimalTwo.imgurl);
+console.log(AnimalOne.name);
 console.log(AnimalOne.country);
+console.log(AnimalTwo.color);
+console.log(AnimalTwo.imgurl);
+
+
+AnimalOne.feedAnimal();
+
+var animalText = document.getElementById("animalone-spicies");
+animalText.innerHTML = AnimalOne.spicies;
+
+var animalText = document.getElementById("animalone-name");
+animalText.innerHTML = AnimalOne.name;
+
+var animalText = document.getElementById("animalone-country");
+animalText.innerHTML = AnimalOne.country;
+
+var animalText = document.getElementById("animalone-color");
+animalText.innerHTML = AnimalOne.color;
 
