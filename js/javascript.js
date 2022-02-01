@@ -7,7 +7,8 @@ class Animal {
     this.imgurl = imgurl;
   }
   feedAnimal() {
-    console.log(this.name, "is now eating");
+    let AnimalFood = prompt("Feed the animal width? ");
+    console.log(this.name, "ate a portion of", AnimalFood);
   }
 }
 
