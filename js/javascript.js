@@ -7,7 +7,7 @@ class Animal {
     this.imgurl = imgurl;
   }
   feedAnimal() {
-    console.log(this.name, "trenger mere mat");
+    console.log(this.name, "is now eating");
   }
 }
 
@@ -31,9 +31,6 @@ console.log(AnimalOne.country);
 console.log(AnimalTwo.color);
 console.log(AnimalTwo.imgurl);
 
-
-AnimalOne.feedAnimal();
-
 var animalText = document.getElementById("animalone-spicies");
 animalText.innerHTML = AnimalOne.spicies;
 
@@ -46,3 +43,40 @@ animalText.innerHTML = AnimalOne.country;
 var animalText = document.getElementById("animalone-color");
 animalText.innerHTML = AnimalOne.color;
 
+var img = new Image(300);
+var div = document.getElementById("animalone-img");
+
+img.onload = function () {
+  div.appendChild(img);
+};
+
+img.src = AnimalOne.imgurl;
+
+var animalText = document.getElementById("animaltwo-spicies");
+animalText.innerHTML = AnimalTwo.spicies;
+
+var animalText = document.getElementById("animaltwo-name");
+animalText.innerHTML = AnimalTwo.name;
+
+var animalText = document.getElementById("animaltwo-country");
+animalText.innerHTML = AnimalTwo.country;
+
+var animalText = document.getElementById("animaltwo-color");
+animalText.innerHTML = AnimalTwo.color;
+
+var img1 = new Image(300);
+var div1 = document.getElementById("animaltwo-img");
+
+img1.onload = function () {
+  div1.appendChild(img1);
+};
+
+img1.src = AnimalTwo.imgurl;
+
+function myFunction() {
+  AnimalOne.feedAnimal();
+}
+
+function myFunction1() {
+  AnimalTwo.feedAnimal();
+}
